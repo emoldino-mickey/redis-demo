@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.emoldino.api.common.resource.base.dto.AiDataIn;
+import com.emoldino.api.common.resource.base.dto.DataIn;
 import com.emoldino.framework.dto.SuccessOut;
 
 import io.swagger.annotations.Api;
@@ -13,7 +13,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(protocols = "http, https", tags = "Kafka Test")
 @RequestMapping("/api/common/test")
-public interface AiDataController {
+public interface DataController {
 	
 	@ApiOperation("Test")
 	@GetMapping
@@ -21,5 +21,5 @@ public interface AiDataController {
 		
 	@ApiOperation("Data Send Test")
 	@PostMapping("/send")
-	SuccessOut send(@RequestBody AiDataIn input);
+	SuccessOut send(@RequestBody DataIn input);
 }
